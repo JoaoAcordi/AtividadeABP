@@ -15,8 +15,3 @@
 **Tecnologias:** Bootstrap, React.
 
 **Diferenciais do Projeto:** Técnicas de organização de estoque com acompanhamento de vendas, previsão de estoque.
-  
-
-
-
-

@@ -9,6 +9,11 @@
     background-position: center;
   }
 
+form {
+    border: 2px solid black;
+    padding: 2.5%;
+}
+
 .container h1 {
     text-align: center;
     font-size: 30px;
@@ -71,7 +76,7 @@
 .container button {
     width: 100%;
     height: 45px;
-    background: #39f898;
+    background: #018ecf;
     border: none;
     outline: none;
     border-radius: 40px;

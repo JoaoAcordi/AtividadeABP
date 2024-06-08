@@ -16,7 +16,7 @@ const Login = () => {
   return (
     <div className="container">
       <form onSubmit={handleSubmit}>
-        <h1>Acesso Chat</h1>
+        <h1>Login</h1>
         <div className="input-field">
           <input
             type="text"
@@ -37,12 +37,7 @@ const Login = () => {
           />
           <FaLock className="icon" />
         </div>
-        <Link to={""}><button type="submit" >Login</button></Link>
-        <div className="signup-link">
-          <p>
-            Não tem uma conta? <a href="#">Registrar</a>
-          </p>
-        </div>
+        <Link to={"/dashboard"}><button type="submit">Login</button></Link>
       </form>
     </div>
   );
