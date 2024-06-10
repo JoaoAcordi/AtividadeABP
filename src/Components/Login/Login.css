@@ -4,7 +4,7 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background: url('/src/Components/Images/MoacirLogo.png') no-repeat center center fixed;
+    background: url('/public/MoacirLogo.png') no-repeat center center fixed;
     background-size: cover;
     font-family: Arial, sans-serif;
 }
