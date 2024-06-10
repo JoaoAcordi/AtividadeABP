@@ -14,7 +14,7 @@ Data: `13/05/2024` até `24/06/2024`
 
 **Tela de Login**
 
-<img align="center" alt="Tela Login" src="/src/Components/Images/MoacirLogo.png">
+<img align="center" width="500" height="300"  alt="Tela Login" src="/src/Components/Images/MoacirLogo.png">
 
 **Cliente:** Donos de mercado que querem reduzir custos e melhorar a administração do seu negócio.
 
