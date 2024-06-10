@@ -66,7 +66,6 @@ form {
 
 .recall-forget a {
     color: #000000;
-    text-decoration: none;
 }
 
 .recall-forget a:hover {
@@ -85,7 +84,6 @@ form {
     font-size: 16px;
     color: #000000;
     font-weight: 700;
-    text-shadow: none;
 }
 
 .container .signup-link {
@@ -102,4 +100,29 @@ form {
 
 .signup-link p a:hover {
     text-decoration: underline;
+}
+
+.option-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 10%;
+}
+
+.option-button {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid black;
+    transition: background-color 0.3s;
+}
+
+.circle.selected {
+    background-color: black;
 }
