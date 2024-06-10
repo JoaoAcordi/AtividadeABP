@@ -1,128 +1,92 @@
-.container {
-    font-family: sans-serif;
+body {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    background: white;
+    height: 100vh;
+    margin: 0;
+    background: url('/src/Components/Images/MoacirLogo.png') no-repeat center center fixed;
     background-size: cover;
-    background-position: center;
-  }
-
-form {
-    border: 2px solid black;
-    padding: 2.5%;
+    font-family: Arial, sans-serif;
 }
-
-.container h1 {
+  
+.container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+  
+h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
     text-align: center;
-    font-size: 30px;
-    color: #000000;
 }
-
-.container .input-field {
+  
+.input-field {
     position: relative;
-    width: 100%;
-    height: 50px;
-    margin: 30px auto;
+    margin-bottom: 20px;
 }
-
+  
 .input-field input {
     width: 100%;
-    height: 100%;
-    background: transparent;
-    outline: none;
-    border: 2px solid rgba(0, 0, 0, 0.2);
-    border-radius: 40px;
-    font-size: 16px;
-    color: #000000;
-    padding: 20px 45px 20px 25px;
+    padding: 10px;
+    padding-left: 30px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
 }
-
-.input-field input::placeholder {
-    color: #000000;
-}
-
+  
 .input-field .icon {
     position: absolute;
-    right: 25px;
+    left: 10px;
     top: 50%;
     transform: translateY(-50%);
-    font-size: 16px;
-    color: #0a0606;
+    color: #888;
 }
-
-.container .recall-forget {
-    display: flex;
-    justify-content: space-between;
-    font-size: 14.5px;
-    margin: -15px 0 15px;
-}
-
-.recall-forget label input {
-    accent-color: #000000;
-    margin-right: 4px;
-}
-
-.recall-forget a {
-    color: #000000;
-}
-
-.recall-forget a:hover {
-    text-decoration: underline;
-}
-
-.container button {
-    width: 100%;
-    height: 45px;
-    background: #018ecf;
-    border: none;
-    outline: none;
-    border-radius: 40px;
-    box-shadow: 0 0 10px rgba(63, 55, 55, 0.1);
-    cursor: pointer;
-    font-size: 16px;
-    color: #000000;
-    font-weight: 700;
-}
-
-.container .signup-link {
-    font-size: 14.5px;
-    text-align: center;
-    margin: 20px 0 15px;
-}
-
-.signup-link p a {
-    color: #000000;
-    text-decoration: none;
-    font-weight: 600;
-}
-
-.signup-link p a:hover {
-    text-decoration: underline;
-}
-
+  
 .option-container {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-bottom: 10%;
+    justify-content: space-between;
+    margin-bottom: 20px;
 }
-
+  
 .option-button {
     display: flex;
     align-items: center;
     cursor: pointer;
+    color: #333;
+    font-size: 14px;
 }
-
-.circle {
+  
+.option-button .circle {
     width: 20px;
     height: 20px;
+    border: 2px solid #ccc;
     border-radius: 50%;
-    border: 2px solid black;
-    transition: background-color 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
-.circle.selected {
-    background-color: black;
+  
+.option-button .circle.selected {
+    background-color: #4caf50;
+    border-color: #4caf50;
 }
+  
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+  
+button:hover {
+    background-color: #45a049;
+}
+  
