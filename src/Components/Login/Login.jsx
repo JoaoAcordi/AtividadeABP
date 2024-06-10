@@ -1,16 +1,25 @@
 import { useState } from "react";
 import { FaUser, FaLock } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import "./Login.css";
 
 function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [selectedRole, setSelectedRole] = useState(null);
+  const navigate = useNavigate();
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log("Dados de Login:", { username, password });
+    console.log("Dados de Login:", { username, password, role: selectedRole });
+
+    if (selectedRole === "vendedor") {
+      navigate("/vendedor");
+    } else if (selectedRole === "gerente") {
+      navigate("/gerente");
+    } else {
+      alert("Por favor, selecione um cargo.");
+    }
   };
 
   const selectButton = (role) => {
@@ -56,7 +65,7 @@ function Login() {
           </div>
         </div>
         
-        <Link to={"/dashboard"}><button type="submit">Login</button></Link>
+        <button type="submit">Login</button>
       </form>
     </div>
   );
