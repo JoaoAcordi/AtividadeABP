@@ -10,7 +10,7 @@ Data: `13/05/2024` até `24/06/2024`
 
 **Objetivo do Projeto:** O objetivo é otimizar operações, reduzir custos e melhorar a administração do mercado, através de um sistema eficaz de controle de estoque e vendas.
 
-**Estrutura do Projeto:** Inicia-se com uma tela de login, se o usuário for vendedor, ele será direcionado à tela de vendas, se for gerente, será direcionado à tela de controle de estoque.
+**Estrutura do Projeto:** Inicia-se com uma tela de login e, logando-se, é direcionado até uma tela de dashboard com informações úteis, assim como botões para acessar os sistemas de venda e estoque.
 
 **Tela de Login**
 
@@ -18,6 +18,6 @@ Data: `13/05/2024` até `24/06/2024`
 
 **Cliente:** Donos de mercado que querem reduzir custos e melhorar a administração do seu negócio.
 
-**Tecnologias:** Bootstrap, React.
+**Tecnologias:** HTML, CSS, React, Vite.js.
 
-**Diferenciais do Projeto:** Técnicas de organização de estoque com acompanhamento de vendas, previsão de estoque.
+**Diferenciais do Projeto:** Organização de estoque com acompanhamento de vendas, previsão de estoque.
