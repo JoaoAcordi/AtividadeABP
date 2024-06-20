@@ -13,10 +13,8 @@ function Login() {
     event.preventDefault();
     console.log("Dados de Login:", { username, password, role: selectedRole });
 
-    if (selectedRole === "salesman") {
-      navigate("/salesman");
-    } else if (selectedRole === "manager") {
-      navigate("/manager");
+    if (selectedRole) {
+      navigate("/dashboard");
     } else {
       alert("Por favor, selecione um cargo.");
     }
@@ -28,7 +26,7 @@ function Login() {
 
   return (
     <div className="body-login">
-      <div className="container">
+      <div className="container-login">
         <form onSubmit={handleSubmit}>
           <h1>Login</h1>
 
