@@ -27,46 +27,48 @@ function Login() {
   };
 
   return (
-    <div className="container">
-      <form onSubmit={handleSubmit}>
-        <h1>Login</h1>
+    <div className="body-login">
+      <div className="container">
+        <form onSubmit={handleSubmit}>
+          <h1>Login</h1>
 
-        <div className="input-field">
-          <input
-            type="text"
-            placeholder="E-mail"
-            required
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-          />
-          <FaUser className="icon" />
-        </div>
+          <div className="input-field">
+            <input
+              type="text"
+              placeholder="E-mail"
+              required
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+            />
+            <FaUser className="icon" />
+          </div>
 
-        <div className="input-field">
-          <input
-            type="password"
-            placeholder="Senha"
-            required
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-          <FaLock className="icon" />
-        </div>
+          <div className="input-field">
+            <input
+              type="password"
+              placeholder="Senha"
+              required
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+            <FaLock className="icon" />
+          </div>
 
-        <div className="option-container">
-          <div className="option-button" onClick={() => selectButton('salesman')}>
-            <div className={`circle ${selectedRole === 'salesman' && 'selected'}`} id="salesman"></div>
-            <span>&nbsp;Vendedor</span>
+          <div className="option-container">
+            <div className="option-button" onClick={() => selectButton('salesman')}>
+              <div className={`circle ${selectedRole === 'salesman' && 'selected'}`} id="salesman"></div>
+              <span>&nbsp;Vendedor</span>
+            </div>
+            
+            <div className="option-button" onClick={() => selectButton('manager')}>
+              <div className={`circle ${selectedRole === 'manager' && 'selected'}`} id="manager"></div>
+              <span>&nbsp;Gerente</span>
+            </div>
           </div>
           
-          <div className="option-button" onClick={() => selectButton('manager')}>
-            <div className={`circle ${selectedRole === 'manager' && 'selected'}`} id="manager"></div>
-            <span>&nbsp;Gerente</span>
-          </div>
-        </div>
-        
-        <button type="submit">Login</button>
-      </form>
+          <button type="submit">Login</button>
+        </form>
+      </div>
     </div>
   );
 };
