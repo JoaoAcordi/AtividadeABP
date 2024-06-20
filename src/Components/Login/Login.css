@@ -1,3 +1,7 @@
+#root {
+    width: 21.5%;
+}
+
 body {
     display: flex;
     justify-content: center;

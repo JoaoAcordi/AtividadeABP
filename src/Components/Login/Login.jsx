@@ -13,10 +13,10 @@ function Login() {
     event.preventDefault();
     console.log("Dados de Login:", { username, password, role: selectedRole });
 
-    if (selectedRole === "vendedor") {
-      navigate("/vendedor");
-    } else if (selectedRole === "gerente") {
-      navigate("/gerente");
+    if (selectedRole === "salesman") {
+      navigate("/salesman");
+    } else if (selectedRole === "manager") {
+      navigate("/manager");
     } else {
       alert("Por favor, selecione um cargo.");
     }
@@ -54,13 +54,13 @@ function Login() {
         </div>
 
         <div className="option-container">
-          <div className="option-button" onClick={() => selectButton('vendedor')}>
-            <div className={`circle ${selectedRole === 'vendedor' && 'selected'}`} id="vendedor"></div>
+          <div className="option-button" onClick={() => selectButton('salesman')}>
+            <div className={`circle ${selectedRole === 'salesman' && 'selected'}`} id="salesman"></div>
             <span>&nbsp;Vendedor</span>
           </div>
           
-          <div className="option-button" onClick={() => selectButton('gerente')}>
-            <div className={`circle ${selectedRole === 'gerente' && 'selected'}`} id="gerente"></div>
+          <div className="option-button" onClick={() => selectButton('manager')}>
+            <div className={`circle ${selectedRole === 'manager' && 'selected'}`} id="manager"></div>
             <span>&nbsp;Gerente</span>
           </div>
         </div>
