@@ -1,8 +1,12 @@
-import './Dashboard.css'
 import { useNavigate } from "react-router-dom";
+import { useSales } from '../Salesman/SalesContext';
+import './Dashboard.css'
 
 function Dashboard() {
     const navigate = useNavigate();
+    const { totalSales, soldItems } = useSales(); // Usa o contexto de vendas
+    const expense = 10.00; // Valor fictício para a despesa
+    const balance = totalSales - expense;
 
   return (
     <div className="container-dash">
@@ -18,9 +22,19 @@ function Dashboard() {
         </div>
         <div className="content-dash">
             <div className="box-dash">
-                <h2>Total de Vendas</h2>
-                <p>R$ 50,000.00</p>
+                <h2>Balança</h2>
+                <p>Receita: R$ {totalSales.toFixed(2)}</p>
+                <p>Despesa: R$ {expense.toFixed(2)}</p>
+                <p>Lucro: R$ {balance.toFixed(2)}</p>
             </div>
+            <div className="box-dash">
+                    <h2>Últimos Itens Vendidos</h2>
+                    <ul>
+                        {soldItems.map((item, index) => (
+                            <li key={index}>{item.name}: {item.quantity} unidades</li>
+                        ))}
+                    </ul>
+                </div>
             <div className="box-dash">
                 <h2>Estoque Atual</h2>
                 <ul>
