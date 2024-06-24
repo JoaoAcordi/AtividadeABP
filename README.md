@@ -4,7 +4,7 @@
 
 Data: `13/05/2024` até `24/06/2024`
 
-**Lista de Integrantes da Equipe:** `Edrik Steiner`, `Daniela Cardoso`, `João Daniel De Liz`, `João Gabriel Rosso` e `João Pedro Accordi`.
+**Lista de Integrantes da Equipe:** `Edrik Steiner`, `Daniela Cardoso`, `João Daniel De Liz`, `João Gabriel Rosso` e `João Pedro Acordi`.
 
 **Descrição do Projeto:** Controle de estoque e armazenamento do mercado do nosso cliente Moacir.
 
