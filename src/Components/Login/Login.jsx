@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { FaUser, FaLock } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
+import { useAuth } from './AuthContext';
 import "./Login.css";
 
 function Login() {
@@ -8,12 +9,14 @@ function Login() {
   const [password, setPassword] = useState("");
   const [selectedRole, setSelectedRole] = useState(null);
   const navigate = useNavigate();
+  const { setUser } = useAuth();
 
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log("Dados de Login:", { username, password, role: selectedRole });
 
     if (selectedRole) {
+      setUser({ email: username });
       navigate("/dashboard");
     } else {
       alert("Por favor, selecione um cargo.");
@@ -53,13 +56,13 @@ function Login() {
           </div>
 
           <div className="option-container">
-            <div className="option-button" onClick={() => selectButton('salesman')}>
-              <div className={`circle ${selectedRole === 'salesman' && 'selected'}`} id="salesman"></div>
+            <div className="option-button" onClick={() => selectButton('sales')}>
+              <div className={`circle ${selectedRole === 'sales' && 'selected'}`} id="sales"></div>
               <span>&nbsp;Vendedor</span>
             </div>
             
-            <div className="option-button" onClick={() => selectButton('manager')}>
-              <div className={`circle ${selectedRole === 'manager' && 'selected'}`} id="manager"></div>
+            <div className="option-button" onClick={() => selectButton('stock')}>
+              <div className={`circle ${selectedRole === 'stock' && 'selected'}`} id="stock"></div>
               <span>&nbsp;Gerente</span>
             </div>
           </div>
