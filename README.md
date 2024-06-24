@@ -20,4 +20,4 @@ Data: `13/05/2024` até `24/06/2024`
 
 **Tecnologias:** HTML, CSS, React, Vite.js.
 
-**Diferenciais do Projeto:** Organização de estoque com acompanhamento de vendas, previsão de estoque.
+**Diferenciais do Projeto:** Organização de estoque com acompanhamento de vendas, previsão de estoque e gerenciamento ágil.
