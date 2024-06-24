@@ -51,10 +51,11 @@
     border: 1px solid #ddd;
     border-radius: 4px;
     width: 40%;
-    padding: 20px;
+    padding: 20px 30px;
     margin: 10px 0;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     height: fit-content;
+    width: fit-content;
 }
 .box-dash h2 {
     font-size: 28px;
