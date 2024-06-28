@@ -1,39 +1,47 @@
 .container-sales {
     padding: 2%;
 }
+
 .header-sales {
     background: orange;
     color: #ffffff;
     padding: 20px 0;
     text-align: center;
 }
+
 .header-sales h1 {
     margin: 0;
     font-size: 32px;
 }
+
 .content-sales {
     background: #ffffff;
     padding: 20px;
     margin-top: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
 .form-group-container-sales {
     display: flex;
     gap: 10px;
     margin-bottom: 20px;
 }
+
 .form-group-sales {
     flex: 1;
 }
+
 .form-group-sales label {
     display: block;
     margin-bottom: 5px;
 }
+
 .form-group-sales input {
     width: 100%;
     padding: 8px;
     box-sizing: border-box;
 }
+
 .form-group-sales button {
     padding: 10px 15px;
     background: orange;
@@ -42,6 +50,7 @@
     cursor: pointer;
     border-radius: 5px;
 }
+
 .form-group-sales button:hover {
     background: rgba(255, 68, 0, 0.7);
 }
@@ -55,37 +64,46 @@ table {
     border-collapse: collapse;
     margin-top: 20px;
 }
+
 table, th, td {
     border: 1px solid #ddd;
 }
+
 th, td {
     padding: 10px;
     text-align: center;
 }
+
 th {
     background: #f4f4f4;
 }
+
 .action-buttons-sales {
     display: flex;
     gap: 10px;
 }
+
 .action-buttons-sales button {
     padding: 5px 10px;
     border: none;
     cursor: pointer;
     border-radius: 3px;
 }
+
 .action-buttons-sales .edit {
     background: #ffc107;
     color: #ffffff;
 }
+
 .action-buttons-sales .edit:hover {
     background: #e0a800;
 }
+
 .action-buttons-sales .delete {
     background: #dc3545;
     color: #ffffff;
 }
+
 .action-buttons-sales .delete:hover {
     background: #c82333;
 }
