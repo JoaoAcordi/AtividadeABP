@@ -1,6 +1,5 @@
 import { createContext, useContext, useState } from 'react';
 
-// Criação do contexto
 const StockContext = createContext();
 
 export const useStock = () => {
@@ -18,7 +17,6 @@ export const StockProvider = ({ children }) => {
 
     const updateStockItem = (updatedItem) => {
         setStockItems(stockItems.map(item => item.id === updatedItem.id ? updatedItem : item));
-        // Recalculate total expenses
         const newTotal = stockItems.reduce((total, item) => {
             return total + (item.id === updatedItem.id ? updatedItem.price * updatedItem.quantity : item.price * item.quantity);
         }, 0);
@@ -36,4 +34,4 @@ export const StockProvider = ({ children }) => {
             {children}
         </StockContext.Provider>
     );
-};
+}

@@ -5,11 +5,11 @@ import { useAuth } from './AuthContext';
 import "./Login.css";
 
 function Login() {
+  const navigate = useNavigate();
+  const { setUser } = useAuth();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [selectedRole, setSelectedRole] = useState(null);
-  const navigate = useNavigate();
-  const { setUser } = useAuth();
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -37,8 +37,7 @@ function Login() {
             <input
               type="text"
               placeholder="E-mail"
-              required
-              value={username}
+              required value={username}
               onChange={(e) => setUsername(e.target.value)}
             />
             <FaUser className="icon" />
@@ -48,8 +47,7 @@ function Login() {
             <input
               type="password"
               placeholder="Senha"
-              required
-              value={password}
+              required value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
             <FaLock className="icon" />
@@ -72,6 +70,6 @@ function Login() {
       </div>
     </div>
   );
-};
+}
 
 export default Login;

@@ -48,6 +48,7 @@ function Stock() {
             <div className="header-stock">
                 <h1>Estoque</h1>
             </div>
+
             <div className="content-stock">
                 <div className="form-group-container-stock">
                     <div className="form-group-stock">
@@ -64,6 +65,7 @@ function Stock() {
                             }}
                         />
                     </div>
+
                     <div className="form-group-stock">
                         <label htmlFor="item-quantity">Quantidade do Item</label>
                         <input 
@@ -81,6 +83,7 @@ function Stock() {
                             }}
                         />
                     </div>
+
                     <div className="form-group-stock">
                         <label htmlFor="item-price">Preço do Item</label>
                         <input 
@@ -99,11 +102,13 @@ function Stock() {
                         />
                     </div>
                 </div>
+
                 <div className="form-group-stock">
                     <button onClick={handleAddOrUpdate}>
                         {editId ? 'Atualizar Item' : 'Adicionar Item'}
                     </button>
                 </div>
+
                 <table>
                     <thead>
                         <tr>
@@ -113,15 +118,20 @@ function Stock() {
                             <th>Ações</th>
                         </tr>
                     </thead>
+
                     <tbody>
                         {stockItems.map(item => (
                             <tr key={item.id}>
                                 <td>{item.name}</td>
                                 <td>{item.quantity}</td>
-                                <td>R$ {item.price}</td>
+                                <td>R${item.price}</td>
                                 <td className="action-buttons-stock">
-                                    <button className="edit" onClick={() => handleEdit(item.id)}>Editar</button>
-                                    <button className="delete" onClick={() => handleDelete(item.id)}>Deletar</button>
+                                    <button className="edit" onClick={() => handleEdit(item.id)}>
+                                        Editar
+                                    </button>
+                                    <button className="delete" onClick={() => handleDelete(item.id)}>
+                                        Deletar
+                                    </button>
                                 </td>
                             </tr>
                         ))}

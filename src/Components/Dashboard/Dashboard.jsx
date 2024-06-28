@@ -1,14 +1,14 @@
 import { useNavigate } from "react-router-dom";
+import { useAuth } from '../Login/AuthContext';
 import { useSales } from '../Sales/SalesContext';
 import { useStock } from '../Stock/StockContext';
-import { useAuth } from '../Login/AuthContext';
 import './Dashboard.css';
 
 function Dashboard() {
     const navigate = useNavigate();
+    const { user } = useAuth();
     const { totalSales, soldItems } = useSales();
     const { totalExpenses, stockItems } = useStock();
-    const { user } = useAuth();
     const balance = totalSales - totalExpenses;
 
     return (
@@ -18,11 +18,13 @@ function Dashboard() {
                     <img src="https://via.placeholder.com/50" alt="User Photo"/>
                     <h1>Bem-vindo, {user ? user.email : '[Usuário]'}!</h1>
                 </div>
+
                 <div className="nav-buttons">
                     <button onClick={() => navigate('/sales')}>Sistema de Vendas</button>
                     <button onClick={() => navigate('/stock')}>Sistema de Estoque</button>
                 </div>
             </div>
+
             <div className="content-dash">
                 <div className="box-dash">
                     <h2>Balanço</h2>
@@ -30,6 +32,7 @@ function Dashboard() {
                     <p>Despesa: R$ {totalExpenses.toFixed(2)}</p>
                     <p>Lucro: R$ {balance.toFixed(2)}</p>
                 </div>
+
                 <div className="box-dash">
                     <h2>Últimos Itens Vendidos</h2>
                     <ul>
@@ -38,6 +41,7 @@ function Dashboard() {
                         ))}
                     </ul>
                 </div>
+
                 <div className="box-dash">
                     <h2>Estoque Atual</h2>
                     <ul>
